@@ -1,7 +1,9 @@
 package com.example.demo;
 
 import javafx.event.EventHandler;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
@@ -12,21 +14,30 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+//import javafx.util.Optional;
+
+import java.io.IOException;
 import java.util.Optional;
 
-public class EndGame {
-    private static EndGame singleInstance = null;
-    private EndGame(){
+public class menu {
+    private static menu singleInstance = null;
+    private menu(){
 
     }
-    public static EndGame getInstance(){
+    public static menu getInstance(){
         if(singleInstance == null)
-            singleInstance= new EndGame();
+            singleInstance= new menu();
         return singleInstance;
     }
 
-    public void endGameShow(Scene endGameScene, Group root, Stage primaryStage,long score){
-        Text text = new Text("GAME OVER");
+    public void menuScene(Scene menuScene, Group root, Stage primaryStage,long score) throws IOException {
+        Parent menuRoot = FXMLLoader.load(getClass().getResource("sample.fxml"));
+
+        Scene scene = new Scene(menuRoot);
+
+        primaryStage.setScene(scene);
+
+        Text text = new Text("Welcome to 2048!");
         text.relocate(250,250);
         text.setFont(Font.font(80));
         root.getChildren().add(text);
