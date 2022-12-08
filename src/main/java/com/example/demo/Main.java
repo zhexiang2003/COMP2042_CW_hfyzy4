@@ -1,24 +1,17 @@
 package com.example.demo;
 
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
-import javafx.scene.control.ButtonType;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.scene.control.Button;
 import javafx.scene.shape.Rectangle;
 
-import java.util.Optional;
 import java.util.Scanner;
 
 public class Main extends Application {
@@ -27,6 +20,12 @@ public class Main extends Application {
     private Group gameRoot = new Group();
     private Scene gameScene = new Scene(gameRoot, WIDTH, HEIGHT, Color.rgb(189, 177, 92));
     private static Scanner input= new Scanner(System.in);
+    private AnchorPane menuBackground;
+    private Button playButton;
+    Stage startScene;
+
+    public Main() {
+    }
 
     public void setGameScene(Scene gameScene) {
         this.gameScene = gameScene;
@@ -37,7 +36,6 @@ public class Main extends Application {
     }
 
     public void startMenu (Stage primaryStage) throws Exception {
-
 
     }
 
@@ -75,7 +73,11 @@ public class Main extends Application {
         primaryStage.setScene(gameScene);
         GameScene game = new GameScene();
         game.game(gameScene, gameRoot, primaryStage, endGameScene, endgameRoot);
-        
+
+        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        Scene startUpScene = new Scene(root);
+        primaryStage.setTitle("2048");
+        primaryStage.setScene(startUpScene);
 
         primaryStage.show();
 

@@ -317,7 +317,7 @@ class GameScene {
                             root.getChildren().clear();
                             score = 0;
                         }
-                    } else if(haveEmptyCell == 1)
+                    } else if(haveEmptyCell == 1&& key.getCode().isArrowKey())
                         GameScene.this.randomFillNumber(2);
                 });
             });

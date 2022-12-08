@@ -20,7 +20,7 @@
             </Text>
             <TextField id="playerNameBox" fx:id="playerNameBox" layoutX="268.0" layoutY="284.0" />
             <Text id="Player Name Text" layoutX="168.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player name:" textAlignment="CENTER" wrappingWidth="99.9999710083008" />
-            <Button id="playButton" fx:id="playButton" layoutX="245.0" layoutY="337.0" mnemonicParsing="false" text="Play!">
+            <Button id="playButton" fx:id="playButton" layoutX="245.0" layoutY="337.0" mnemonicParsing="false" onAction="#switchToGame" text="Play!">
                <font>
                   <Font size="22.0" />
                </font>
