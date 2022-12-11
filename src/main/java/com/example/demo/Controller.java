@@ -25,7 +25,7 @@ public class Controller {
     private GridPane girdmenu;
 
     @FXML
-    private Button blueButton;
+    private Button ultimateGrayButton;
 
     @FXML
     private Button dewberryButton;
@@ -40,14 +40,14 @@ public class Controller {
     private TextField playerNameBox;
 
     @FXML
-    private Button redButton;
+    private Button veriPeryButton;
 
     static final int WIDTH = 1000;
     static final int HEIGHT = 700;
     private Group gameRoot = new Group();
     private Scene gameScene = new Scene(gameRoot, WIDTH, HEIGHT, Color.rgb(189, 177, 92));
     private static Scanner input= new Scanner(System.in);
-    private Color colorString;
+    private Color colorString = Color.rgb(189, 177, 92);
 
     //Stage primaryStage;
     Parent root;
@@ -89,11 +89,6 @@ public class Controller {
         Stage primaryStage = new Stage();
         Group gameRoot = new Group();
         setGameRoot(gameRoot);
-
-        if (playButton.isPressed()) {
-            colorString = Color.rgb(0,0,0);
-        }
-
         Scene gameScene = new Scene(gameRoot, WIDTH, HEIGHT, colorString);
         setGameScene(gameScene);
         primaryStage.setScene(gameScene);
@@ -106,9 +101,9 @@ public class Controller {
     }
 
     @FXML
-    public void blueColour(ActionEvent event) {
+    public void ultimateGrayColour(ActionEvent event) {
         // the variable that carries the string color will be changed
-        colorString = Color.rgb(0,0,255);
+        colorString = Color.rgb(147,149,151);
     }
 
     @FXML
@@ -117,8 +112,8 @@ public class Controller {
     }
 
     @FXML
-    public void redColour(ActionEvent event) {
-        colorString = Color.rgb(255,0,0);
+    public void veriPeryColour(ActionEvent event) {
+        colorString = Color.rgb(102,103,171);
     }
 
 //    public void switchToGame (Stage primaryStage) throws IOException {

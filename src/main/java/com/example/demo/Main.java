@@ -75,7 +75,7 @@ public class Main extends Application {
 //        game.game(gameScene, gameRoot, primaryStage, endGameScene, endgameRoot);
 //
 //        primaryStage.show();
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("mainMenu.fxml"));
         Scene startUpScene = new Scene(root);
         primaryStage.setTitle("2048");
         primaryStage.setScene(startUpScene);

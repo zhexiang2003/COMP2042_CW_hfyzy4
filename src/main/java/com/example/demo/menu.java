@@ -31,7 +31,7 @@ public class menu {
     }
 
     public void menuScene(Scene menuScene, Group root, Stage primaryStage,long score) throws IOException {
-        Parent menuRoot = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        Parent menuRoot = FXMLLoader.load(getClass().getResource("mainMenu.fxml"));
 
         Scene scene = new Scene(menuRoot);
 

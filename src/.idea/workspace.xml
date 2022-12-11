@@ -4,13 +4,13 @@
     <list default="true" id="442deea6-664c-485d-9e79-20a04cceba4e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/java/com/example/demo/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/GameScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/java/com/example/demo/GameScene.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/java/com/example/demo/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/main/java/com/example/demo/sample.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/java/com/example/demo/menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/sample.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/COMP2042_CW_hfyzy4/com/example/demo/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/COMP2042_CW_hfyzy4/com/example/demo/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMP2042_CW_hfyzy4/com/example/demo/GameScene.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/COMP2042_CW_hfyzy4/com/example/demo/GameScene.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/COMP2042_CW_hfyzy4/com/example/demo/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/COMP2042_CW_hfyzy4/com/example/demo/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMP2042_CW_hfyzy4/com/example/demo/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/COMP2042_CW_hfyzy4/com/example/demo/sample.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP2042_CW_hfyzy4/com/example/demo/menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/COMP2042_CW_hfyzy4/com/example/demo/menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP2042_CW_hfyzy4/com/example/demo/sample.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,11 +81,6 @@
           <url>file://$PROJECT_DIR$/main/java/com/example/demo/GameScene.java</url>
           <line>138</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/main/java/com/example/demo/Controller.java</url>
-          <line>84</line>
-          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -30,12 +30,12 @@
                   <Font size="14.0" />
                </font>
             </Text>
-            <Button id="playButton" fx:id="blueButton" layoutX="341.0" layoutY="192.0" mnemonicParsing="false" onAction="#blueColour" prefHeight="30.0" prefWidth="75.0" text="Blue">
+            <Button id="playButton" fx:id="ultimateGrayButton" layoutX="341.0" layoutY="192.0" mnemonicParsing="false" onAction="#ultimateGrayColour" prefHeight="30.0" prefWidth="111.0" text="Ultimate Gray">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button id="playButton" fx:id="redButton" layoutX="142.0" layoutY="192.0" mnemonicParsing="false" onAction="#redColour" prefHeight="30.0" prefWidth="75.0" text="Red">
+            <Button id="playButton" fx:id="veriPeryButton" layoutX="142.0" layoutY="192.0" mnemonicParsing="false" onAction="#veriPeryColour" prefHeight="30.0" prefWidth="75.0" text="Veri Pery">
                <font>
                   <Font size="14.0" />
                </font>
