@@ -8,6 +8,7 @@
       <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/java/com/example/demo/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/main/java/com/example/demo/sample.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/COMP2042_CW_hfyzy4/com/example/demo/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/COMP2042_CW_hfyzy4/com/example/demo/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP2042_CW_hfyzy4/com/example/demo/GameScene.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/COMP2042_CW_hfyzy4/com/example/demo/GameScene.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/COMP2042_CW_hfyzy4/com/example/demo/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/COMP2042_CW_hfyzy4/com/example/demo/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/COMP2042_CW_hfyzy4/com/example/demo/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/COMP2042_CW_hfyzy4/com/example/demo/sample.fxml" afterDir="false" />
     </list>
@@ -81,11 +82,10 @@
           <line>138</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-field">
+        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/main/java/com/example/demo/Controller.java</url>
-          <line>36</line>
-          <properties field="redButton" class="com.example.demo.Controller" />
-          <option name="timeStamp" value="3" />
+          <line>84</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

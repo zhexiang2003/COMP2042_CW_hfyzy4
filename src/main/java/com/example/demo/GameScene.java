@@ -209,7 +209,7 @@ class GameScene {
         if (isValidDesH(i, j, des, sign)) {
             cells[i][j].adder(cells[i][des + sign]);
             score += cells[i][des + sign].getNumber();
-            cells[i][des].setModify(true);
+            cells[i][des + sign].setModify(true);
         } else if (des != j) {
             cells[i][j].changeCell(cells[i][des]);
         }
@@ -228,7 +228,7 @@ class GameScene {
         if (isValidDesV(i, j, des, sign)) {
             cells[i][j].adder(cells[des + sign][j]);
             score += cells[des + sign][j].getNumber();
-            cells[des][j].setModify(true);
+            cells[des + sign][j].setModify(true);
         } else if (des != i) {
             cells[i][j].changeCell(cells[des][j]);
         }
