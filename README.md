@@ -1,12 +1,13 @@
  # COMP2042_CW_hfyzy4
 
-Student Name: Yap Zhe Xiang
-Student Number: 20319761
+Yap Zhe Xiang
+20319761
 
 How to compile the code to produce the application
 The IDE I used for this assignment is IntelliJ. The reason why I used Intellij because of last semester's project, I completed last semester's project using Intellij. Therefore, I'm more familiar with the IntelliJ than Eclipse. Another reason I chose Intellij, because it is more user-friendly than Eclipse, and I do not have to spend time on learning how to use Eclipse. It is easier for me to set up Javafx and integrate Github in IntelliJ. 
 
 Where your Javadoc documentation is stored (the path to the directory)
+C:\Users\zhexi\OneDrive - University of Nottingham Malaysia\University Projects\COMP2042_CW_hfyzy4\src\main\java\com\example\demo
 
 A list of features that are implemented and are working properly
 
@@ -21,11 +22,10 @@ A list of features that are implemented and are not working properly
 - Leaderboard
 I created the FXML file for the leaderboard and a leaderboard button has been created in the main menu which the user can look at the leaderboard with one click. However, the leaderboard still remains empty and lines of error codes appeared in the IDE. The bug that causes the broken leaderboard could be in the Account class, but the exact line of code is still not discovered yet.  
 
-
 A list of features, if any, that are not implemented with an explanation of why they were not implemented
 
 Level system
-I planned to create a level system, which the player is allowed to proceed to next level if they won. The reason why this is not implemeted because of time constraints, I spent too much time on the leaderboard. 
+I planned to create a level system, which the player is allowed to proceed to next level if they won. The reason why this is not implemeted because I spent too much time on the leaderboard. 
 
 The correct colour picker.
 The alternative way is using the correct colour picker where it allows player/user to pick a colour from a wide variety of choice. Again, due to time contraints, I had to focus on creating other features. 
