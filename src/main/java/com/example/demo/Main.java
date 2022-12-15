@@ -1,17 +1,13 @@
 package com.example.demo;
 
 import javafx.application.Application;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
-import javafx.geometry.Insets;
 import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.*;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import javafx.scene.control.Button;
-import javafx.scene.shape.Rectangle;
 
 import java.util.Scanner;
 
@@ -22,7 +18,6 @@ public class Main extends Application {
     private Scene gameScene = new Scene(gameRoot, WIDTH, HEIGHT, Color.rgb(189, 177, 92));
     private static Scanner input= new Scanner(System.in);
     private AnchorPane menuBackground;
-    private Button playButton;
     Stage startScene;
 
     public void setGameScene(Scene gameScene) {
@@ -37,10 +32,9 @@ public class Main extends Application {
 
     }
 
-
-
     @Override
     public void start(Stage primaryStage) throws Exception {
+        Account.readFile();
 
 //        Group menuRoot = new Group();
 //        Scene menuScene = new Scene(menuRoot, WIDTH, HEIGHT);
@@ -86,5 +80,6 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         launch(args);
+
     }
 }

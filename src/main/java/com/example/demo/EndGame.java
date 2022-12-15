@@ -1,7 +1,8 @@
 package com.example.demo;
 
+import javafx.application.Platform;
 import javafx.event.EventHandler;
-import javafx.fxml.FXMLLoader;
+import javafx.fxml.FXML;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
@@ -9,24 +10,32 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.Parent;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Popup;
 import javafx.stage.Stage;
-import javafx.stage.Window;
-import javafx.application.Platform;
 
-import java.io.IOException;
+import java.io.File;
 import java.util.Optional;
 
 public class EndGame {
     public Popup messagePopUp = new Popup();
     public Label labelMessage = new Label("This is a popup!");
 
+    public MediaPlayer mediaPlayer;
+
+    @FXML
+    private Button congratsMainMenuButton;
+
+    @FXML
+    private Button congratsQuitButton;
+
+
     private static EndGame singleInstance = null;
-    private EndGame(){
+    public EndGame(){
 
     }
     public static EndGame getInstance(){
@@ -36,6 +45,7 @@ public class EndGame {
     }
 
     public void endGameShow(Scene endGameScene, Group root, Stage primaryStage,long score) {
+
         Text text = new Text("GAME OVER");
         text.relocate(300,150);
         text.setFont(Font.font(80));
@@ -46,19 +56,10 @@ public class EndGame {
         scoreText.relocate(410,300);
         scoreText.setFont(Font.font(60));
         root.getChildren().add(scoreText);
-        /*
-        //FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("scorePopup.fxml"));
-        Parent parent = null;
-        try {
-            parent = FXMLLoader.load(getClass().getResource("scorePopup.fxml"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        messagePopUp.getContent().add(parent);
-        messagePopUp.setAutoFix(true);
-        messagePopUp.setAutoHide(true);
-        messagePopUp.show(primaryStage);
-        */
+
+        Media media = new Media(new File("C:\\Users\\zhexi\\OneDrive - University of Nottingham Malaysia\\University Projects\\COMP2042_CW_hfyzy4\\src\\main\\java\\com\\example\\demo\\Rick Astley - Never Gonna Give You Up (Official Music Video).mp3").toURI().toString());
+        MediaPlayer mediaPlayer = new MediaPlayer(media);
+        mediaPlayer.play();
 
         Button quitButton = new Button("QUIT");
         quitButton.setPrefSize(100,30);
@@ -91,8 +92,10 @@ public class EndGame {
         mainMenuButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
+                mediaPlayer.stop();
                 primaryStage.close();
             }
         });
     }
+
 }

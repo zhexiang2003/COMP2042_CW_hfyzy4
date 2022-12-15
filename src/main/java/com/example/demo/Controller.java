@@ -5,7 +5,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.scene.Group;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -37,10 +36,19 @@ public class Controller {
     private Button playButton;
 
     @FXML
-    private TextField playerNameBox;
+    private Button veriPeryButton;
 
     @FXML
-    private Button veriPeryButton;
+    private TextField username;
+
+    @FXML
+    private Button leaderboardButton;
+
+    @FXML
+    private Button congratsMainMenuButton;
+
+    @FXML
+    private Button congratsQuitButton;
 
     static final int WIDTH = 1000;
     static final int HEIGHT = 700;
@@ -93,10 +101,16 @@ public class Controller {
         setGameScene(gameScene);
         primaryStage.setScene(gameScene);
         GameScene game = new GameScene();
-        game.game(gameScene, gameRoot, primaryStage, endGameScene, endgameRoot);
+
+        String name = username.getText();
+        Account user = new Account();
+
+        game.game(gameScene, gameRoot, primaryStage, endGameScene, endgameRoot,user);
         primaryStage.setTitle("2048");
 
         primaryStage.show();
+
+
 
     }
 
@@ -114,6 +128,35 @@ public class Controller {
     @FXML
     public void veriPeryColour(ActionEvent event) {
         colorString = Color.rgb(102,103,171);
+    }
+
+    @FXML
+    public void playerName (ActionEvent event) {
+
+    }
+
+    @FXML
+    public void viewLeaderboard(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("leaderboard.fxml"));
+        Parent leaderBoardRoot = loader.load();
+        Scene leaderboard = new Scene(leaderBoardRoot);
+        Stage secondaryStage = new Stage();
+        System.out.println(secondaryStage+" "+leaderboard+" "+leaderBoardRoot);
+        secondaryStage.setTitle("2048 Leaderboard");
+        secondaryStage.setScene(leaderboard);
+        secondaryStage.show();
+
+    }
+
+    @FXML
+    void congratsMainMenu(ActionEvent event) {
+        Stage primaryStage = new Stage();
+        primaryStage.close();
+    }
+
+    @FXML
+    void congratsQuitGame(ActionEvent event) {
+
     }
 
 //    public void switchToGame (Stage primaryStage) throws IOException {

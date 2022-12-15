@@ -1,16 +1,22 @@
 package com.example.demo;
 
+import javafx.animation.PauseTransition;
 import javafx.application.Platform;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.media.Media;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
+import java.io.IOException;
 import java.util.Random;
 
 class GameScene {
@@ -22,6 +28,13 @@ class GameScene {
     private Cell[][] cells = new Cell[n][n];
     private Group root;
     private long score = 0;
+    private Media media;
+
+    @FXML
+    private Button congratsMainMenuButton;
+
+    @FXML
+    private Button congratsQuitButton;
 
     static void setN(int number) {
         n = number;
@@ -271,9 +284,8 @@ class GameScene {
 
     }
 
-    void game(Scene gameScene, Group root, Stage primaryStage, Scene endGameScene, Group endGameRoot) {
-        this.root =
-                root;
+    void game(Scene gameScene, Group root, Stage primaryStage, Scene endGameScene, Group endGameRoot, Account acc) {
+        this.root = root;
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 cells[i][j] = new Cell((j) * LENGTH + (j + 1) * distanceBetweenCells,
@@ -281,6 +293,7 @@ class GameScene {
             }
 
         }
+
 
         Text text = new Text();
         root.getChildren().add(text);
@@ -315,13 +328,42 @@ class GameScene {
                         if (GameScene.this.canNotMove()) {
                             primaryStage.setScene(endGameScene);
 
+                            acc.addToScore(score);
+                            try {
+                                Account.writeFile(acc);
+                                Account.accounts.clear();
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+
                             EndGame.getInstance().endGameShow(endGameScene, endGameRoot, primaryStage, score);
                             root.getChildren().clear();
                             score = 0;
                         }
-                    } else if(haveEmptyCell == 1&& key.getCode().isArrowKey())
+                    } else if(haveEmptyCell == 1 && key.getCode().isArrowKey()) {
                         GameScene.this.randomFillNumber(2);
-                });
+                    }
+                    else if (haveEmptyCell == 0) {
+                        acc.addToScore(score);
+
+                        Parent congratsRoot = null;
+                        try {
+                            congratsRoot = FXMLLoader.load(getClass().getResource("congratulations.fxml"));
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+
+                        Scene winningScene = new Scene(congratsRoot);
+                        primaryStage.setTitle("2048");
+                        primaryStage.setScene(winningScene);
+
+                        PauseTransition delay = new PauseTransition(Duration.seconds(6.5));
+                        delay.setOnFinished( event -> primaryStage.close() );
+                        delay.play();
+
+                    }
+                    });
             });
     }
+
 }

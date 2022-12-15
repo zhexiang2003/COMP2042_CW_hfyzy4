@@ -1,22 +1,21 @@
 package com.example.demo;
 
-import javafx.scene.Group;
-import javafx.scene.Scene;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
-import javafx.scene.text.Font;
-import javafx.scene.text.Text;
-
+import java.io.*;
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class Account implements Comparable<Account> {
-    private long score = 0;
-    private String userName ;
-    private static ArrayList<Account> accounts = new ArrayList<>();
 
-    public Account(String userName){
+    private static long score = 0;
+    private static String userName ;
+    public static ArrayList<Account> accounts = new ArrayList<>();
+
+    public Account(String userName, long score){
         this.userName=userName;
+        this.score = score;
+    }
+
+    public Account() {
+
     }
 
     @Override
@@ -28,11 +27,11 @@ public class Account implements Comparable<Account> {
         this.score += score;
     }
 
-    private long getScore() {
+    public Long getScore() {
         return score;
     }
 
-    private String getUserName() {
+    public String getUserName() {
         return userName;
     }
 
@@ -46,10 +45,47 @@ public class Account implements Comparable<Account> {
 
     }
 
-    static Account makeNewAccount(String userName){
-        Account account = new Account(userName);
-        accounts.add(account);
-        return account;
+    static void makeNewAccount(String userName, Long score){
+        Account acc = new Account(userName, score);
+        accounts.add(acc);
     }
+
+    public void setScore(long score) {
+        this.score = score;
+    }
+
+    static void writeFile (Account acc) throws IOException {
+        String name = acc.getUserName();
+        long score = acc.getScore();
+
+        BufferedWriter writeUsername = new BufferedWriter(new FileWriter("C:\\Users\\zhexi\\OneDrive - University of Nottingham Malaysia\\University Projects\\COMP2042_CW_hfyzy4\\src\\main\\java\\com\\example\\demo\\accounts.txt",true));
+        writeUsername.write(name);
+        writeUsername.write(", ");
+        writeUsername.write(String.valueOf(score));
+        writeUsername.newLine();
+        writeUsername.close();
+    }
+
+
+    public static void readFile() throws IOException {
+        System.out.println("jjj");
+        BufferedReader readUsername = new BufferedReader(new FileReader("C:\\Users\\zhexi\\OneDrive - University of Nottingham Malaysia\\University Projects\\COMP2042_CW_hfyzy4\\src\\main\\java\\com\\example\\demo\\accounts.txt"));
+        String line;
+        while ((line = readUsername.readLine()) != null) {
+            //System.out.println(line);
+            String[] lineSplit = line.split(", ");
+            //System.out.println(lineSplit[0]+" "+Long.valueOf(lineSplit[1]));
+            makeNewAccount(lineSplit[0],Long.valueOf(lineSplit[1]));
+            //Account.makeNewAccount(userName,score);
+            System.out.println(lineSplit[0]+" "+Long.valueOf(lineSplit[1]));
+        }
+//        Collections.sort(accounts);
+        readUsername.close();
+/*
+        Collections.sort(accounts);
+*/
+
+    }
+
 
 }
