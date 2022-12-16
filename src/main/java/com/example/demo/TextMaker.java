@@ -5,6 +5,14 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
+/**
+ * The TextMaker class is responsible for modifying the text element in the game.
+ *
+ * <p>
+ *      The class involves in creating text elements for a given string.
+ * </p>
+ * */
+
 class TextMaker {
     private static TextMaker singleInstance = null;
 
@@ -18,6 +26,7 @@ class TextMaker {
         return singleInstance;
     }
 
+    /** Create text element for the given string such as font size and location. */
     Text madeText(String input, double xCell, double yCell, Group root) {
         double length = GameScene.getLENGTH();
         double fontSize = (3 * length) / 7.0;
@@ -29,6 +38,7 @@ class TextMaker {
         return text;
     }
 
+    /** Swap the properties of the two text elements. */
     static void changeTwoText(Text first, Text second) {
         String temp;
         temp = first.getText();

@@ -12,6 +12,14 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+/**
+ * This is the leaderboard class for the game 2048.
+ *
+ * <p>
+ *
+ * </p>
+ * */
+
 public class leaderboardController implements Initializable {
 
     @FXML

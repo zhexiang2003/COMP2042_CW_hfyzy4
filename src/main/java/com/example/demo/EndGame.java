@@ -2,37 +2,35 @@ package com.example.demo;
 
 import javafx.application.Platform;
 import javafx.event.EventHandler;
-import javafx.fxml.FXML;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
-import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
-import javafx.stage.Popup;
 import javafx.stage.Stage;
 
 import java.io.File;
 import java.util.Optional;
 
+/**
+ * This is the EndGame class for the 2048 game.
+ *
+ * <p>
+ *     The Endgame class is responsible for handling the end game scene. It displays the game over scene which contains
+ *     the word 'game over' and the score.
+ * </p>
+ */
+
 public class EndGame {
-    public Popup messagePopUp = new Popup();
-    public Label labelMessage = new Label("This is a popup!");
 
+    /** The mediaPlayer role is to play the music file. */
     public MediaPlayer mediaPlayer;
-
-    @FXML
-    private Button congratsMainMenuButton;
-
-    @FXML
-    private Button congratsQuitButton;
-
 
     private static EndGame singleInstance = null;
     public EndGame(){
@@ -44,23 +42,30 @@ public class EndGame {
         return singleInstance;
     }
 
+    /** This function is responsible to display the end game scene, including the game over text, score, quit button
+     * and main menu button. */
+
     public void endGameShow(Scene endGameScene, Group root, Stage primaryStage,long score) {
 
+        /** Display the text. */
         Text text = new Text("GAME OVER");
         text.relocate(300,150);
         text.setFont(Font.font(80));
         root.getChildren().add(text);
 
+        /** Display the score. */
         Text scoreText = new Text("Score: "+score+"");
         scoreText.setFill(Color.BLACK);
         scoreText.relocate(410,300);
         scoreText.setFont(Font.font(60));
         root.getChildren().add(scoreText);
 
+        /** Play the music. */
         Media media = new Media(new File("C:\\Users\\zhexi\\OneDrive - University of Nottingham Malaysia\\University Projects\\COMP2042_CW_hfyzy4\\src\\main\\java\\com\\example\\demo\\Rick Astley - Never Gonna Give You Up (Official Music Video).mp3").toURI().toString());
         MediaPlayer mediaPlayer = new MediaPlayer(media);
         mediaPlayer.play();
 
+        /** Terminate the program when the quit button is pressed. */
         Button quitButton = new Button("QUIT");
         quitButton.setPrefSize(100,30);
         quitButton.setTextFill(Color.BLACK);
@@ -83,6 +88,7 @@ public class EndGame {
             }
         });
 
+        /** Return to the main menu when the main menu button is pressed.x */
         Button mainMenuButton = new Button("Main Menu");
         mainMenuButton.setPrefSize(150,30);
         mainMenuButton.setTextFill(Color.BLACK);

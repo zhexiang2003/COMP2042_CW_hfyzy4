@@ -17,48 +17,55 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Scanner;
 
-
+/**
+ * This is the Controller class for the main menu of the game 2048.
+ *
+ * <p>
+ *     This class is responsible for user input and buttons handling. The game state will be updated if any buttons are
+ *     pressed or clicked.
+ * </p>
+ * */
 public class Controller {
 
+    /** Gridpane of the mainMenu.fxml*/
     @FXML
     private GridPane girdmenu;
 
+    /** Change to ultimate gray colour in game.*/
     @FXML
     private Button ultimateGrayButton;
 
+    /**  Change to dewberry colour in game.*/
     @FXML
     private Button dewberryButton;
 
+    /** Anchor Pane of the mainMenu.fxml*/
     @FXML
     private AnchorPane menuBackground;
 
+    /** Play the game when the button is pressed. */
     @FXML
     private Button playButton;
 
+    /** Change to Veri Pery colour*/
     @FXML
     private Button veriPeryButton;
 
+    /** Insert username in the textfield*/
     @FXML
     private TextField username;
 
+    /** Click to view the leaderboard of the game*/
     @FXML
     private Button leaderboardButton;
 
-    @FXML
-    private Button congratsMainMenuButton;
-
-    @FXML
-    private Button congratsQuitButton;
-
+    /** The basic information of the game, including the game dimension, root, scene and colour scheme. */
     static final int WIDTH = 1000;
     static final int HEIGHT = 700;
     private Group gameRoot = new Group();
     private Scene gameScene = new Scene(gameRoot, WIDTH, HEIGHT, Color.rgb(189, 177, 92));
     private static Scanner input= new Scanner(System.in);
     private Color colorString = Color.rgb(189, 177, 92);
-
-    //Stage primaryStage;
-    Parent root;
 
     public void setGameScene(Scene gameScene) {
         this.gameScene = gameScene;
@@ -67,6 +74,9 @@ public class Controller {
     public void setGameRoot(Group gameRoot) {
         this.gameRoot = gameRoot;
     }
+
+    /** The gme is started when the play button is clicked. This function will create the 2048 game scene based on the
+     * information. */
 
     @FXML
     void switchToGame(ActionEvent event) {
@@ -110,21 +120,22 @@ public class Controller {
 
         primaryStage.show();
 
-
-
     }
 
+    /** The background will be changed to Ultimate Gray colour when its button is pressed.*/
     @FXML
     public void ultimateGrayColour(ActionEvent event) {
         // the variable that carries the string color will be changed
         colorString = Color.rgb(147,149,151);
     }
 
+    /** The background will be changed to Dewberry colour when its button is pressed.*/
     @FXML
     public void dewberryColour(ActionEvent event) {
         colorString = Color.rgb(139,85,155);
     }
 
+    /** The background will be changed to Veri Pery colour when its button is pressed.*/
     @FXML
     public void veriPeryColour(ActionEvent event) {
         colorString = Color.rgb(102,103,171);
@@ -135,6 +146,7 @@ public class Controller {
 
     }
 
+    /** The leaderboard will appear in new window when its button is pressed. */
     @FXML
     public void viewLeaderboard(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("leaderboard.fxml"));
@@ -148,16 +160,6 @@ public class Controller {
 
     }
 
-    @FXML
-    void congratsMainMenu(ActionEvent event) {
-        Stage primaryStage = new Stage();
-        primaryStage.close();
-    }
-
-    @FXML
-    void congratsQuitGame(ActionEvent event) {
-
-    }
 
 //    public void switchToGame (Stage primaryStage) throws IOException {
 //

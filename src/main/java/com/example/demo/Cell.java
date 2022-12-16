@@ -5,20 +5,46 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 
+/**
+ * This class represents the cell in the game.
+ *
+ * <p>
+ *     Each cell of the rectangle area contains a number. The numbers are moved horizontally or vertically and they
+ *     combine together to create a sum of both same number. The colour of the cell is based on the number it contains.
+ * </p>
+ *
+ */
+
+
 public class Cell {
+
+    /** The rectangle represents the cell on the game board */
     private Rectangle rectangle;
+
+    /** Root node of the game scene */
     private Group root;
+
+    /** The text element of the number in the cell. */
     private Text textClass;
+
+    /** Check if the flag is modified */
     private boolean modify = false;
+
+
+    /** Check if the cell is modified */
 
     void setModify(boolean modify) {
         this.modify = modify;
     }
 
+    /** Return the value of modify. */
+
     boolean getModify() {
         return modify;
     }
 
+
+    /** Constructs a new cell at the given position */
     Cell(double x, double y, double scale, Group root) {
         rectangle = new Rectangle();
         rectangle.setX(x);
@@ -35,6 +61,7 @@ public class Cell {
         this.textClass = textClass;
     }
 
+    /** Change the content of the cell */
     void changeCell(Cell cell) {
         TextMaker.changeTwoText(textClass, cell.getTextClass());
         root.getChildren().remove(cell.getTextClass());

@@ -11,6 +11,16 @@ import javafx.stage.Stage;
 
 import java.util.Scanner;
 
+/**
+ * This is the main class for the game 2048.
+ *
+ * <p>This class extends the Application class and this is the main entry for the game. The game needed to be started
+ * through this main class.
+ * </p>
+ *
+ * @author Yap Zhe Xiang
+ */
+
 public class Main extends Application {
     static final int WIDTH = 1000;
     static final int HEIGHT = 700;
