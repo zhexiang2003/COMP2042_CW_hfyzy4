@@ -2,27 +2,69 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="442deea6-664c-485d-9e79-20a04cceba4e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/java/com/example/demo/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/java/com/example/demo/Cell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/java/com/example/demo/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/EndGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/java/com/example/demo/EndGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/java/com/example/demo/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/TextMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/java/com/example/demo/TextMaker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/accounts.txt" beforeDir="false" afterPath="$PROJECT_DIR$/main/java/com/example/demo/accounts.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/allclasses-index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/allpackages-index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/com.example.demo/com/example/demo/Account.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/com.example.demo/com/example/demo/Cell.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/com.example.demo/com/example/demo/Controller.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/com.example.demo/com/example/demo/EndGame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/com.example.demo/com/example/demo/Main.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/com.example.demo/com/example/demo/leaderboardController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/com.example.demo/com/example/demo/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/com.example.demo/com/example/demo/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/com.example.demo/module-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/help-doc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/index-files/index-1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/index-files/index-10.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/index-files/index-11.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/index-files/index-12.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/index-files/index-13.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/index-files/index-2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/index-files/index-3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/index-files/index-4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/index-files/index-5.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/index-files/index-6.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/index-files/index-7.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/index-files/index-8.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/index-files/index-9.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/jquery-ui.overrides.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/leaderboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/java/com/example/demo/leaderboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMP2042_CW_hfyzy4/com/example/demo/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/COMP2042_CW_hfyzy4/com/example/demo/Account.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMP2042_CW_hfyzy4/com/example/demo/Cell.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/COMP2042_CW_hfyzy4/com/example/demo/Cell.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMP2042_CW_hfyzy4/com/example/demo/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/COMP2042_CW_hfyzy4/com/example/demo/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMP2042_CW_hfyzy4/com/example/demo/EndGame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/COMP2042_CW_hfyzy4/com/example/demo/EndGame$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMP2042_CW_hfyzy4/com/example/demo/EndGame$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/COMP2042_CW_hfyzy4/com/example/demo/EndGame$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMP2042_CW_hfyzy4/com/example/demo/EndGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/COMP2042_CW_hfyzy4/com/example/demo/EndGame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMP2042_CW_hfyzy4/com/example/demo/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/COMP2042_CW_hfyzy4/com/example/demo/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMP2042_CW_hfyzy4/com/example/demo/TextMaker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/COMP2042_CW_hfyzy4/com/example/demo/TextMaker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/legal/COPYRIGHT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/legal/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/legal/jquery.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/legal/jqueryUI.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/member-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/module-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/overview-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/package-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/resources/glass.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/resources/x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/script-dir/images/ui-bg_glass_55_fbf9ee_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/script-dir/images/ui-bg_glass_65_dadada_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/script-dir/images/ui-bg_glass_75_dadada_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/script-dir/images/ui-bg_glass_75_e6e6e6_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/script-dir/images/ui-bg_glass_95_fef1ec_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/script-dir/images/ui-bg_highlight-soft_75_cccccc_1x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/script-dir/images/ui-icons_222222_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/script-dir/images/ui-icons_2e83ff_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/script-dir/images/ui-icons_454545_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/script-dir/images/ui-icons_888888_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/script-dir/images/ui-icons_cd0a0a_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/script-dir/jquery-3.5.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/script-dir/jquery-ui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/script-dir/jquery-ui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/script-dir/jquery-ui.structure.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/stylesheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/tag-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/example/demo/type-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP2042_CW_hfyzy4/com/example/demo/GameScene.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/COMP2042_CW_hfyzy4/com/example/demo/GameScene.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/COMP2042_CW_hfyzy4/com/example/demo/accounts.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/COMP2042_CW_hfyzy4/com/example/demo/accounts.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMP2042_CW_hfyzy4/com/example/demo/congratulations.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/COMP2042_CW_hfyzy4/com/example/demo/congratulations.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP2042_CW_hfyzy4/com/example/demo/leaderboardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/COMP2042_CW_hfyzy4/com/example/demo/leaderboardController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

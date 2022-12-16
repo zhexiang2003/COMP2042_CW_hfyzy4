@@ -16,12 +16,15 @@ import java.util.ResourceBundle;
  * This is the leaderboard class for the game 2048.
  *
  * <p>
- *
+ *     This class is responsible for displaying the leaderboard of the game. The leaderboard is created using JavaFX
+ *     TableView.
  * </p>
  * */
 
+/** The leaderboardController class allows initialization when the leaderboard function is called. */
 public class leaderboardController implements Initializable {
 
+    /** Leaderboard has three variables which are leaderboard, usernameColumn and scoreColumn. */
     @FXML
     private TableView<Account> leaderboard;
 
@@ -31,10 +34,13 @@ public class leaderboardController implements Initializable {
     @FXML
     private TableColumn<Account, Long> scoreColumn;
 
+    /** This ObservableList contains the list of account in the static Account class. */
     ObservableList<Account> list = FXCollections.observableArrayList(Account.accounts);
+
     public leaderboardController() throws IOException {
     }
 
+    /** This method is called when the leaderboard is loaded. */
     public void initialize(URL url, ResourceBundle resourceBundle) {
         System.out.println("hello");
         for(Account acc : Account.accounts){
@@ -42,8 +48,6 @@ public class leaderboardController implements Initializable {
         }
         usernameColumn.setCellValueFactory(new PropertyValueFactory<Account, String>("userName"));
         scoreColumn.setCellValueFactory(new PropertyValueFactory<Account, Long>("score"));
-//        usernameColumn.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getUserName()));
-//        scoreColumn.setCellValueFactory(cellData -> new SimpleLongProperty(cellData.getValue().getScore()).asObject());
         leaderboard.setItems(list);
 
     }
