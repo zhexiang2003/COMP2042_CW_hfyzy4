@@ -76,7 +76,7 @@ public class Account implements Comparable<Account> {
         String name = acc.getUserName();
         long score = acc.getScore();
 
-        BufferedWriter writeUsername = new BufferedWriter(new FileWriter("C:\\Users\\zhexi\\OneDrive - University of Nottingham Malaysia\\University Projects\\COMP2042_CW_hfyzy4\\src\\main\\java\\com\\example\\demo\\accounts.txt",true));
+        BufferedWriter writeUsername = new BufferedWriter(new FileWriter("main/java/com/example/demo/accounts.txt",true));
         writeUsername.write(name);
         writeUsername.write(", ");
         writeUsername.write(String.valueOf(score));
@@ -86,22 +86,17 @@ public class Account implements Comparable<Account> {
 
     /** Read the account list from the file. */
     public static void readFile() throws IOException {
-        System.out.println("jjj");
-        BufferedReader readUsername = new BufferedReader(new FileReader("C:\\Users\\zhexi\\OneDrive - University of Nottingham Malaysia\\University Projects\\COMP2042_CW_hfyzy4\\src\\main\\java\\com\\example\\demo\\accounts.txt"));
+
+        BufferedReader readUsername = new BufferedReader(new FileReader("main/java/com/example/demo/accounts.txt"));
         String line;
         while ((line = readUsername.readLine()) != null) {
-            //System.out.println(line);
+
             String[] lineSplit = line.split(", ");
-            //System.out.println(lineSplit[0]+" "+Long.valueOf(lineSplit[1]));
+
             makeNewAccount(lineSplit[0],Long.valueOf(lineSplit[1]));
-            //Account.makeNewAccount(userName,score);
-            System.out.println(lineSplit[0]+" "+Long.valueOf(lineSplit[1]));
         }
-//        Collections.sort(accounts);
+
         readUsername.close();
-/*
-        Collections.sort(accounts);
-*/
 
     }
 

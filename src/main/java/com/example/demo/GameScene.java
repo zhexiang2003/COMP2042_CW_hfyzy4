@@ -11,15 +11,25 @@ import javafx.scene.control.Button;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.util.Random;
 
-class GameScene {
+/**
+ * This is the GameScene class for the game 2048.
+ *
+ * <p>
+ *  The GameScene class is responsible for handling the game behaviour.
+ *</p>
+ * */
+
+public class GameScene {
     private static int HEIGHT = 700;
     private static int n = 4;
     private final static int distanceBetweenCells = 10;
@@ -336,7 +346,11 @@ class GameScene {
                                 e.printStackTrace();
                             }
 
-                            EndGame.getInstance().endGameShow(endGameScene, endGameRoot, primaryStage, score);
+                            try {
+                                EndGame.getInstance().endGameShow(endGameScene, endGameRoot, primaryStage, score);
+                            } catch (URISyntaxException e) {
+                                e.printStackTrace();
+                            }
                             root.getChildren().clear();
                             score = 0;
                         }
@@ -346,9 +360,16 @@ class GameScene {
                     else if (haveEmptyCell == 0) {
                         acc.addToScore(score);
 
+                        try {
+                            Account.writeFile(acc);
+                            Account.accounts.clear();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+
                         Parent congratsRoot = null;
                         try {
-                            congratsRoot = FXMLLoader.load(getClass().getResource("congratulations.fxml"));
+                            congratsRoot = FXMLLoader.load(getClass().getResource("fxml/congratulations.fxml"));
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
@@ -356,6 +377,19 @@ class GameScene {
                         Scene winningScene = new Scene(congratsRoot);
                         primaryStage.setTitle("2048");
                         primaryStage.setScene(winningScene);
+
+                        Media cheeringMedia = null;
+                        try {
+                            cheeringMedia = new Media(Main.class.getResource("media/Rick Astley - Never Gonna Give You Up (Official Music Video).mp3").toURI().toString());
+                        } catch (URISyntaxException e) {
+                            e.printStackTrace();
+                        }
+                        MediaPlayer mediaPlayer = new MediaPlayer(cheeringMedia);
+                        mediaPlayer.play();
+
+                        PauseTransition stopMusic = new PauseTransition(Duration.seconds(6.5));
+                        stopMusic.setOnFinished( event -> mediaPlayer.stop() );
+                        stopMusic.play();
 
                         PauseTransition delay = new PauseTransition(Duration.seconds(6.5));
                         delay.setOnFinished( event -> primaryStage.close() );

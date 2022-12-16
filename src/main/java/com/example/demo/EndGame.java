@@ -15,7 +15,7 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-import java.io.File;
+import java.net.URISyntaxException;
 import java.util.Optional;
 
 /**
@@ -43,9 +43,13 @@ public class EndGame {
     }
 
     /** This function is responsible to display the end game scene, including the game over text, score, quit button
-     * and main menu button. */
+     * and main menu button.
+     * @param endGameScene end game scene
+     * @param root root
+     * @param primaryStage primary stage
+     * @param score score*/
 
-    public void endGameShow(Scene endGameScene, Group root, Stage primaryStage,long score) {
+    public void endGameShow(Scene endGameScene, Group root, Stage primaryStage,long score) throws URISyntaxException {
 
         /** Display the text. */
         Text text = new Text("GAME OVER");
@@ -61,7 +65,7 @@ public class EndGame {
         root.getChildren().add(scoreText);
 
         /** Play the music. */
-        Media media = new Media(new File("C:\\Users\\zhexi\\OneDrive - University of Nottingham Malaysia\\University Projects\\COMP2042_CW_hfyzy4\\src\\main\\java\\com\\example\\demo\\Rick Astley - Never Gonna Give You Up (Official Music Video).mp3").toURI().toString());
+        Media media = new Media(Main.class.getResource("media/Rick Astley - Never Gonna Give You Up (Official Music Video).mp3").toURI().toString());
         MediaPlayer mediaPlayer = new MediaPlayer(media);
         mediaPlayer.play();
 

@@ -13,7 +13,7 @@ import javafx.scene.text.Text;
  * </p>
  * */
 
-class TextMaker {
+public class TextMaker {
     private static TextMaker singleInstance = null;
 
     private TextMaker() {
@@ -26,8 +26,15 @@ class TextMaker {
         return singleInstance;
     }
 
-    /** Create text element for the given string such as font size and location. */
-    Text madeText(String input, double xCell, double yCell, Group root) {
+    /**
+     * Create text element for the given string such as font size and location.
+     * @param input Input String
+     * @param xCell Location x
+     * @param yCell Location y
+     * @param root root
+     * @return the text
+     */
+    public Text madeText(String input, double xCell, double yCell, Group root) {
         double length = GameScene.getLENGTH();
         double fontSize = (3 * length) / 7.0;
         Text text = new Text(input);
@@ -38,8 +45,12 @@ class TextMaker {
         return text;
     }
 
-    /** Swap the properties of the two text elements. */
-    static void changeTwoText(Text first, Text second) {
+    /**
+     * Swap the properties of the two text elements.
+     * @param first first text
+     * @param second second text
+     */
+    public static void changeTwoText(Text first, Text second) {
         String temp;
         temp = first.getText();
         first.setText(second.getText());

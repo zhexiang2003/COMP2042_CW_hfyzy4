@@ -76,7 +76,8 @@ public class Controller {
     }
 
     /** The gme is started when the play button is clicked. This function will create the 2048 game scene based on the
-     * information. */
+     * information.
+     * @param event event*/
 
     @FXML
     void switchToGame(ActionEvent event) {
@@ -122,20 +123,23 @@ public class Controller {
 
     }
 
-    /** The background will be changed to Ultimate Gray colour when its button is pressed.*/
+    /** The background will be changed to Ultimate Gray colour when its button is pressed.
+     * @param event event*/
     @FXML
     public void ultimateGrayColour(ActionEvent event) {
         // the variable that carries the string color will be changed
         colorString = Color.rgb(147,149,151);
     }
 
-    /** The background will be changed to Dewberry colour when its button is pressed.*/
+    /** The background will be changed to Dewberry colour when its button is pressed.
+     * @param event event*/
     @FXML
     public void dewberryColour(ActionEvent event) {
         colorString = Color.rgb(139,85,155);
     }
 
-    /** The background will be changed to Veri Pery colour when its button is pressed.*/
+    /** The background will be changed to Veri Pery colour when its button is pressed.
+     * @param event event*/
     @FXML
     public void veriPeryColour(ActionEvent event) {
         colorString = Color.rgb(102,103,171);
@@ -146,109 +150,18 @@ public class Controller {
 
     }
 
-    /** The leaderboard will appear in new window when its button is pressed. */
+    /** The leaderboard will appear in new window when its button is pressed.
+     * @param event event*/
     @FXML
     public void viewLeaderboard(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("leaderboard.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("fxml/leaderboard.fxml"));
         Parent leaderBoardRoot = loader.load();
         Scene leaderboard = new Scene(leaderBoardRoot);
         Stage secondaryStage = new Stage();
-        System.out.println(secondaryStage+" "+leaderboard+" "+leaderBoardRoot);
         secondaryStage.setTitle("2048 Leaderboard");
         secondaryStage.setScene(leaderboard);
         secondaryStage.show();
 
     }
 
-
-//    public void switchToGame (Stage primaryStage) throws IOException {
-//
-//        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-//        Stage stage = (Stage) playButton.getScene().getWindow();
-//        Scene scene = new Scene(root);
-//        stage.setScene(scene);
-//
-//
-////        Group menuRoot = new Group();
-////        Scene menuScene = new Scene(menuRoot, WIDTH, HEIGHT);
-////        Group accountRoot = new Group();
-////        Scene accountScene = new Scene(accountRoot, WIDTH, HEIGHT, Color.rgb(150, 20, 100, 0.2));
-////        Group getAccountRoot = new Group();
-////        Scene getAccountScene = new Scene(getAccountRoot, WIDTH, HEIGHT, Color.rgb(200, 20, 100, 0.2));
-////        Group endgameRoot = new Group();
-////        Scene endGameScene = new Scene(endgameRoot, WIDTH, HEIGHT, Color.rgb(250, 20, 100, 0.2));
-////
-////        Group rankRoot = new Group();
-////        Scene rankScene = new Scene(rankRoot, WIDTH, HEIGHT, Color.rgb(250, 50, 120, 0.3));
-////        BackgroundFill background_fill = new BackgroundFill(Color.rgb(120, 100, 100), CornerRadii.EMPTY, Insets.EMPTY);
-////        Background background = new Background(background_fill);
-////
-////        Rectangle backgroundOfMenu = new Rectangle(240, 120, Color.rgb(120, 120, 120, 0.2));
-////        backgroundOfMenu.setX(WIDTH / 2 - 120);
-////        backgroundOfMenu.setY(180);
-////        menuRoot.getChildren().add(backgroundOfMenu);
-////
-////        Rectangle backgroundOfMenuForPlay = new Rectangle(240, 140, Color.rgb(120, 20, 100, 0.2));
-////        backgroundOfMenuForPlay.setX(WIDTH / 2 - 120);
-////        backgroundOfMenuForPlay.setY(180);
-////        accountRoot.getChildren().add(backgroundOfMenuForPlay);
-////
-////        Stage primarystage = new Stage();
-////        Group gameRoot = new Group();
-////        setGameRoot(gameRoot);
-////        Scene gameScene = new Scene(gameRoot, WIDTH, HEIGHT, Color.rgb(189, 177, 92));
-////        setGameScene(gameScene);
-////        primaryStage.setScene(gameScene);
-////        GameScene game = new GameScene();
-////        game.game(gameScene, gameRoot, primaryStage, endGameScene, endgameRoot);
-////
-//////        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-//////        Scene startUpScene = new Scene(root);
-//////        primaryStage.setTitle("2048");
-//////        primaryStage.setScene(startUpScene);
-//////
-////        primaryStage.show();
-//////
-//////        primaryStage = (Stage) playButton.getScene().getWindow();
-//////        Scene scene = new Scene(root);
-//////        primaryStage.setScene(gameScene);
-//  }
-
-
-    /*
-    @FXML
-    public void switchToGame (Stage primaryStage) throws IOException {
-        primaryStage = (Stage) menuBackground.getScene().getWindow();
-        System.out.println("You successfully joined!");
-        primaryStage.setScene(gameScene);
-    }
-    */
-    /*
-
-    private boolean defaultMenu = true;
-
-    public void changeBackgroundColour(ActionEvent event) {
-        if (defaultMenu) {
-            defaultColour();
-        } else {
-            redColour();
-        }
-    }
-
-    public void redColour() {
-        menuBackground.setStyle("-fx-background-color: #FF0000");
-    }
-
-    public void blueColour() {
-        menuBackground.setBackground(Background.fill(Color.BLUE));
-    }
-
-    public void greenColour() {
-        menuBackground.setBackground(Background.fill(Color.GREEN));
-    }
-
-    public void defaultColour() {
-        menuBackground.setStyle("-fx-background-color: #FFFFFF");
-    }
-    */
 }

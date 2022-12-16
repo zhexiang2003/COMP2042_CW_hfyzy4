@@ -42,10 +42,6 @@ public class leaderboardController implements Initializable {
 
     /** This method is called when the leaderboard is loaded. */
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        System.out.println("hello");
-        for(Account acc : Account.accounts){
-            System.out.println(acc.getUserName()+"<<"+acc.getScore());
-        }
         usernameColumn.setCellValueFactory(new PropertyValueFactory<Account, String>("userName"));
         scoreColumn.setCellValueFactory(new PropertyValueFactory<Account, Long>("score"));
         leaderboard.setItems(list);

@@ -31,21 +31,26 @@ public class Cell {
     private boolean modify = false;
 
 
-    /** Check if the cell is modified */
+    /** Check if the cell is modified
+     * @param modify boolean variable - modify */
 
-    void setModify(boolean modify) {
+    public void setModify(boolean modify) {
         this.modify = modify;
     }
 
     /** Return the value of modify. */
 
-    boolean getModify() {
+    public boolean getModify() {
         return modify;
     }
 
 
-    /** Constructs a new cell at the given position */
-    Cell(double x, double y, double scale, Group root) {
+    /** Constructs a new cell at the given position
+     * @param x Location x
+     * @param y Location y
+     * @param scale Scale
+     * @param root Root */
+    public Cell(double x, double y, double scale, Group root) {
         rectangle = new Rectangle();
         rectangle.setX(x);
         rectangle.setY(y);
@@ -61,7 +66,8 @@ public class Cell {
         this.textClass = textClass;
     }
 
-    /** Change the content of the cell */
+    /** Change the content of the cell
+     * @param cell cell content */
     void changeCell(Cell cell) {
         TextMaker.changeTwoText(textClass, cell.getTextClass());
         root.getChildren().remove(cell.getTextClass());
