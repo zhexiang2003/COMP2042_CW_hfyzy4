@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.leaderboardController">
+   <children>
+      <TableView fx:id="leaderboard" layoutX="159.0" layoutY="144.0" prefHeight="200.0" prefWidth="282.0">
+        <columns>
+          <TableColumn fx:id="usernameColumn" prefWidth="180.0" text="Username" />
+          <TableColumn fx:id="scoreColumn" prefWidth="103.20001220703125" text="Score" />
+        </columns>
+      </TableView>
+      <Text layoutX="143.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Leaderboard" textAlignment="CENTER" wrappingWidth="313.3367004394531">
+         <font>
+            <Font size="56.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
